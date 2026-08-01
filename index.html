@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>Resident Competency &amp; Portfolio Tracker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-top">
+    <div class="brand">
+      <span class="brand-mark">RCT</span>
+      <div class="brand-text">
+        <h1>Resident Competency<span class="accent">&amp; Portfolio Tracker</span></h1>
+        <p>Critical Care Cardiology Rotation</p>
+      </div>
+    </div>
+    <div class="resident-switcher">
+      <select id="resident-select" aria-label="Select resident"></select>
+      <button id="btn-new-resident" class="btn btn-teal">+ New Resident</button>
+    </div>
+  </div>
+  <nav class="main-nav" id="main-nav">
+    <button data-view="dashboard" class="nav-btn active">Dashboard</button>
+    <button data-view="goals" class="nav-btn">Goals &amp; Objectives</button>
+    <button data-view="topics" class="nav-btn">Topic Discussions</button>
+    <button data-view="cases" class="nav-btn">Case Log</button>
+    <button data-view="evaluations" class="nav-btn">Evaluations</button>
+    <button data-view="export" class="nav-btn">Export Report</button>
+    <button data-view="settings" class="nav-btn">Settings</button>
+  </nav>
+</header>
+
+<main id="app-root" class="app-root"></main>
+
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal">
+    <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<footer class="app-footer">
+  <p>Standalone tool &middot; data stored locally in this browser only.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
